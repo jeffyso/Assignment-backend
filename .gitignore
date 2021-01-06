@@ -11,6 +11,7 @@ tmp
 # The development sqlite file
 database/*.sqlite
 
+mariadb
 # VSCode & Webstorm history directories
 .history
 .idea
