@@ -17,3 +17,8 @@
 const Route = use('Route')
 
 Route.on('/').render('welcome')
+Route.group(() => {
+    Route.resource('/student','StudentController')
+    Route.resource('/university','UniversityController')
+
+}).prefix('api/v1')
