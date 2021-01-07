@@ -12,16 +12,16 @@ class StudentController {
     }
     async show({ request }) {
         const { id } = request.params
-        const student = await Student.query().with('university').fetch()
+        const student = await Student.query().with('universities').where({student_id:id}).fetch()
         return { status: 200, error: undefined, data:student}
     }
     async store({ request }) {
         const { first_name, last_name, universities_name } = request.body
         const student = await Student.create({ first_name, last_name })
         const university = await University.query().where({ universities_name }).fetch().then(response => JSON.parse(JSON.stringify(response)))
-        const testData = university.map(item => item.universities_id)
-        let testId = await Student.query().count('student_id as id').then(response => JSON.parse(JSON.stringify(response[0])))
-        const connect = await Connect.create({ student_id: testId.id, universities_id: testData[0] })
+        const checkData = university.map(item => item.universities_id)
+        let checkId = await Student.query().count('student_id as id').then(response => JSON.parse(JSON.stringify(response[0])))
+        const connect = await Connect.create({ student_id: checkId.id, university_id: checkData[0] })
 
         return { status: 200, error: undefined, data: student }
     }
