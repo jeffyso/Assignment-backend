@@ -4,11 +4,8 @@
 const Model = use('Model')
 
 class University extends Model {
-    static get primaryKey () {
-        return 'id'
-      }
       student(){
-          return this.hasMany('App/Models/Student')
+          return this.belongsToMany('App/Models/Student').pivotTable('connects')
       }
 }
 
