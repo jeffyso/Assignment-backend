@@ -37,11 +37,11 @@ method:GET http://localhost:3333/api/v1/student
 
 #### Request 
 
-method:GET http://localhost:3333/api/v1/student/:id
+* method:GET http://localhost:3333/api/v1/student/:id
 
 #### Response 
 
-{
+```{
     "status": 200,
     "data": [
         {
@@ -65,6 +65,7 @@ method:GET http://localhost:3333/api/v1/student/:id
         }
     ]
 }
+```
 
 ### Create student data 
 
@@ -72,19 +73,19 @@ method:GET http://localhost:3333/api/v1/student/:id
 
 * request by JSON 
 
-method:GET http://localhost:3333/api/v1/student/:id
+* method:GET http://localhost:3333/api/v1/student/:id
 
 #### Form JSON 
 
-{
+```{
     "first_name":"YourFirstName",
     "last_name":"YourLastName",
     "universities_name":"YourUniversity"
 }
-
+```
 #### Response
 
-{
+``` {
     "status": 200,
     "data": {
         "first_name": "JEFF",
@@ -94,6 +95,7 @@ method:GET http://localhost:3333/api/v1/student/:id
         "student_id": 2
     }
 }
+```
 
 ### Update student data 
 
@@ -101,18 +103,19 @@ method:GET http://localhost:3333/api/v1/student/:id
 
 * request by JSON
 
-method:PUT http://localhost:3333/api/v1/student/:id 
+* method:PUT http://localhost:3333/api/v1/student/:id 
 
 #### Form JSON 
 
-{
+```{
     "first_name":"NewDFirstName",
     "last_name":"NewLastName",
 }
+```
 
 #### Response 
 
-{
+``` {
     "status": 200,
     "data": [
         {
@@ -124,17 +127,17 @@ method:PUT http://localhost:3333/api/v1/student/:id
         }
     ]
 }
-
+```
 ### Delete student data 
 
 # Request
 
-method:DELETE http://localhost:3333/api/v1/student/:id 
+* method:DELETE http://localhost:3333/api/v1/student/:id 
 
 # Response 
-
+```
 {
     "status": 200,
     "message": "DeleteComplete"
 }
-
+```
