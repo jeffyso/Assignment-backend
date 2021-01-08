@@ -282,7 +282,7 @@ method:GET http://localhost:3333/api/v1/university
     ]
 }
 ```
-## Delete student data 
+## Delete university data 
 
 #### Request
 
