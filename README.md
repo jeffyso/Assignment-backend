@@ -12,7 +12,7 @@ method:GET http://localhost:3333/api/v1/student
 
 #### Response
 
-{
+```{
     "status": 200,
     "data": [
         {
@@ -31,6 +31,7 @@ method:GET http://localhost:3333/api/v1/student
         }
     ]
 }
+```
 
 ### Show id student get by id
 
