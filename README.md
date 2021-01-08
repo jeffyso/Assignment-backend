@@ -4,7 +4,7 @@
 
 ## Data Student
 
-### Show all of student
+## Show all of student
 
 #### Request
 
@@ -34,7 +34,7 @@ method:GET http://localhost:3333/api/v1/student
 }
 ```
 
-### Show id student get by id
+## Show id student get by id
 
 #### Request 
 
@@ -69,7 +69,7 @@ method:GET http://localhost:3333/api/v1/student
 }
 ```
 
-### Create student data 
+## Create student data 
 
 #### Request 
 
@@ -101,7 +101,7 @@ method:GET http://localhost:3333/api/v1/student
 }
 ```
 
-### Update student data 
+## Update student data 
 
 #### Request
 
@@ -134,14 +134,14 @@ method:GET http://localhost:3333/api/v1/student
     ]
 }
 ```
-### Delete student data 
+## Delete student data 
 
 
-# Request
+#### Request
 
 * method:DELETE http://localhost:3333/api/v1/student/:id 
 
-# Response 
+#### Response 
 ```
 {
     "status": 200,
