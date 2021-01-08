@@ -221,13 +221,13 @@ method:GET http://localhost:3333/api/v1/university
 }
 ```
 
-## Create student data 
+## Create university data 
 
 #### Request 
 
 * request by JSON 
 
-* method:POST http://localhost:3333/api/v1/student
+* method:POST http://localhost:3333/api/v1/university
 
 #### Form JSON 
 
@@ -251,7 +251,7 @@ method:GET http://localhost:3333/api/v1/university
 }
 ```
 
-## Update student data 
+## Update university data 
 
 #### Request
 
