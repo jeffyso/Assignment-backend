@@ -136,6 +136,7 @@ method:GET http://localhost:3333/api/v1/student
 ```
 ### Delete student data 
 
+
 # Request
 
 * method:DELETE http://localhost:3333/api/v1/student/:id 
@@ -147,9 +148,11 @@ method:GET http://localhost:3333/api/v1/student
     "message": "DeleteComplete"
 }
 ```
+
+
 ## Data University
 
-### Show all of University
+## Show all of University
 
 #### Request
 
@@ -183,7 +186,7 @@ method:GET http://localhost:3333/api/v1/university
 }
 ```
 
-### Show id university get by id
+## Show id university get by id
 
 #### Request 
 
@@ -218,7 +221,7 @@ method:GET http://localhost:3333/api/v1/university
 }
 ```
 
-### Create student data 
+## Create student data 
 
 #### Request 
 
@@ -248,7 +251,7 @@ method:GET http://localhost:3333/api/v1/university
 }
 ```
 
-### Update student data 
+## Update student data 
 
 #### Request
 
@@ -279,13 +282,13 @@ method:GET http://localhost:3333/api/v1/university
     ]
 }
 ```
-### Delete student data 
+## Delete student data 
 
-# Request
+#### Request
 
 * method:DELETE http://localhost:3333/api/v1/university/:id 
 
-# Response 
+#### Response 
 ```
 {
     "status": 200,
