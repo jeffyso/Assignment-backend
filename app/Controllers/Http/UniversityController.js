@@ -29,7 +29,7 @@ class UniversityController {
     }
     async destroy({ request }) {
         const { id } = request.params
-        const university = await Student.query().where({ universities_id: id }).delete()
+        const university = await University.query().where({ universities_id: id }).delete()
         if (!university) {
             return { status: 500, error: `Not Found `, data: undefined };
         }
