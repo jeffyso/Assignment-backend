@@ -1,4 +1,3 @@
-
 version: 2.1
 
 jobs:
@@ -10,6 +9,15 @@ jobs:
       - run:
           name: Install dependency
           command: yarn
+      - run:
+          name: Check linter
+          command: yarn lint:check
+      - run:
+          name: Build application
+          command: yarn build
+      - run:
+          name: Test
+          command: yarn test
 
 workflows:
   build_and_test:
