@@ -3,7 +3,7 @@
 const Student = use('App/Models/Student')
 const University = use('App/Models/University')
 const Connect = use('App/Models/Connect')
-
+const Validator = require('../../../services/StudentValidator')
 
 class StudentController {
     async index({ request }) {
@@ -17,6 +17,9 @@ class StudentController {
     }
     async store({ request }) {
         const { first_name, last_name, universities_name } = request.body
+        const validatedData = await Validator(request.body);
+        if (validatedData.error)
+          return { status: 422, error: validatedData.error, data: undefined };
         const student = await Student.create({ first_name, last_name })
         const university = await University.query().where({ universities_name }).fetch().then(response => JSON.parse(JSON.stringify(response)))
         const checkData = university.map(item => item.universities_id)
