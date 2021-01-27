@@ -1,7 +1,7 @@
 'use strict'
 
 const University = use('App/Models/University')
-
+const Validator = require('../../../services/UniversityValidator')
 class UniversityController {
     async index({ request }) {
         let university = await University.query().fetch()
@@ -13,6 +13,9 @@ class UniversityController {
         return { status: 200, error: undefined, data: university }
     }
     async store({ request }) {
+        const validatedData = await Validator(request.body);
+        if (validatedData.error)
+          return { status: 422, error: validatedData.error, data: undefined };
         let university = await University.create(request.body)
         await university.save()
         return { status: 200, error: undefined, data: university }
